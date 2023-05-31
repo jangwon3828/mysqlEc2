@@ -11,16 +11,11 @@
 <h1>MySQL 데이터 삽입 및 조회 예제</h1>
 <body>
 <%
-    // MySQL 데이터베이스 연결 정보
-    String url = "jdbc:mysql://localhost:3306/Lumindb"; // 데이터베이스 URL
-    String username = "wkd38"; // 데이터베이스 사용자명
-    String password = "1234"; // 데이터베이스 암호
 
-    // MySQL 드라이버 로드
     Class.forName("com.mysql.cj.jdbc.Driver");
 
     // 데이터베이스 연결
-    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Lumindb","wkd38", "1234");
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/geodo2db","geodo2", "1234");
 
     // 사용자 정보 삽입
 
