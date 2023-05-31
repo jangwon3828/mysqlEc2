@@ -12,22 +12,22 @@
 <body>
 <%
     // MySQL 데이터베이스 연결 정보
-    String url = "jdbc:mysql://localhost:3306/db01"; // 데이터베이스 URL
-    String username = "root"; // 데이터베이스 사용자명
+    String url = "jdbc:mysql://localhost:3306/Lumindb"; // 데이터베이스 URL
+    String username = "wkd38"; // 데이터베이스 사용자명
     String password = "1234"; // 데이터베이스 암호
 
     // MySQL 드라이버 로드
     Class.forName("com.mysql.cj.jdbc.Driver");
 
     // 데이터베이스 연결
-    Connection conn = DriverManager.getConnection(url, username, password);
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Lumindb","wkd38", "1234");
 
     // 사용자 정보 삽입
 
 
     String insertQuery = "INSERT INTO user (name, email) VALUES (?, ?)";
     PreparedStatement insertStatement = conn.prepareStatement(insertQuery);
-    insertStatement.setString(1, "John Doe"); // 사용자 이름
+    insertStatement.setString(1, "John_Doe"); // 사용자 이름
     insertStatement.setString(2, "john@example.com"); // 사용자 이메일
     insertStatement.executeUpdate();
 
